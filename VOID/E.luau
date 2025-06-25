@@ -1,5 +1,5 @@
 shared.its_a_cat, shared.its_a_fox, shared.its_a_secrect = "shiro", "lusha", "124590"
-_G.HHXScripts = {
+_G.HHxScripts = {
     [Its_Matched] = {
         [] = {}
     },
