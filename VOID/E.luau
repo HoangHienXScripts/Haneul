@@ -4,6 +4,7 @@ _G.HHxScripts = {
         [] = {}
     },
     "Its_Not_Matched" = {
-        [] = {}
+        [1] = {},
+        [2] = {}
     }
 }
