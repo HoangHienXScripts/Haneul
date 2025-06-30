@@ -41,5 +41,5 @@ function _startcountdown(second)
     end
 end
 
-_startcountdown(1)
+_startcountdown(0.5)
 -- This is just a script i used to trolling my little brother --
