@@ -1,6 +1,8 @@
 -- Don't execute this script if u does not wanna lost your blox fruit df --
 local countdown_point = 60
-while wait(1) do
+_G.Enabled = _G.Enabled or true
+while _G.Enabled do
+    wait(1)
     countdown_point -= 1
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "《Đếm ngược thời gian đá》",
@@ -8,7 +10,8 @@ while wait(1) do
         Duration = 2,
         Button1 = "Ô KÊ",
         Callback = function()
-            game:GetService("Players").LocalPlayer.Character.Humanoid.Health -= 10
+            countdown_point += 2
+            --game:GetService("Players").LocalPlayer.Character.Humanoid.Health -= 10
         end,
     })
     if countdown_point <= 0 then
