@@ -1,1 +1,55 @@
--- nothing --
+-- LoadingScripts --
+local _plrs = game:GetService("Players")
+local _starterui = game:GetService("StarterGui")
+local _GameId = game.GameId
+local _PlaceId = game.PlaceId
+local _plr = _plrs.LocalPlayer
+
+local countdowns, point = false, 1
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangHienXScripts/Haneul/refs/heads/main/ItDoesnt/Wis.luau"))()
+_G.HHxScripts = _G.HHxScripts or {}
+
+function _LoadScripts(Id)
+    local m = _G.HHxScripts["Its_Matched"][Id]
+    local unm = _G.HHxScripts["Its_Not_Matched"][shared._numberX]
+    if m then
+        local ss, err = pcall(function()
+            return loadstring(game:HttpGet(m))()
+        end)
+        if ss then
+            warn("Loading In... Scripts!")
+        else
+            warn("Failed 2 Loading In Scripts!\nERROR:", err)
+        end
+    else
+        loadstring(game:HttpGet(unm))()
+    end
+end
+
+function _Notify(_str)
+    _starterui:SetCore("SendNotification", {
+        Title = "[XScript]",
+        Text = _str,
+        Duration = 2,
+    })
+end
+
+if shared.its_a_cat == "shiro" and shared.its_a_fox == "lusha" and shared.its_a_secrect == "124590" then
+    if _plr.Name == _plr.DisplayName then
+        _Notify("Hello " .. _plr.Name .. "!")
+    else
+        _Notify("Hello " .. _plr.DisplayName .. "!")
+    end
+    _LoadScripts(_GameId)
+else
+    _Notify("What Happened!?")
+    countdowns = true
+    while countdowns do
+        wait(1)
+        point += 1
+        if point >= 10 then
+            _plr:Kick("Somethings Wrong!")
+        end
+    end
+end
