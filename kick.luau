@@ -23,23 +23,40 @@ _txtlb.Text = ""
 _txtlb.Visible = true
 _adduic(_txtlb, 0.15)
 
-local timecountdown, _its_enabled = 320, true
+local timecountdown, secrect_point, _its_enabled, kick_enabled = 2000, 0, true, true
 
 function _startcountdown(second)
     while _its_enabled do
         wait(second)
         timecountdown -= 1
-        _txtlb.Text = "[" .. timecountdown .. "]"
+        if kick_enabled then
+            _txtlb.Text = "[" .. timecountdown .. "]"
+        end
+        
         if timecountdown <= 200 and timecountdown >= 195 then
             _txtlb.TextColor3 = Color3.new(1, 1, 0)
         elseif timecountdown <= 50 and timecountdown >= 45 then
             _txtlb.TextColor3 = Color3.new(1, 0, 0)
         elseif timecountdown <= 0 then
             _its_enabled = false
-            _p.LocalPlayer:Kick("Hết thời gian chơi rồi, đi ngủ đi!")
+            if kick_enabled then
+                _p.LocalPlayer:Kick("Hết thời gian chơi rồi, đi ngủ đi!")
+            else
+                _txtlb.TextColor3 = Color3.new(0, 1, 1)
+                _txtlb.Text = "[ Ahhh hình như nó bị hỏng rùi... ]"
+            end
         end
     end
 end
 
-_startcountdown(0.5)
+_p.CharacterAdded:Connect(function()
+    if _p.Character and _p.Character:FindFirstChild("HumanoidRootPart") then
+        secrect_point += 1
+        if secrect_point >= 5 then
+             kick_enabled = false
+        end
+    end
+end)
+
+_startcountdown(1)
 -- This is just a script i used to trolling my little brother --
