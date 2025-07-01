@@ -1,3 +1,4 @@
+-- Limit Playingtime {put into autoexec} --
 -- Don't execute this script if u does not wanna lost your blox fruit df --
 local _c, _p, _s, _txtlb
 _c = game:GetService("CoreGui")
