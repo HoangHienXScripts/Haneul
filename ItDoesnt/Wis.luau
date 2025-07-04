@@ -7,7 +7,7 @@ _G.HHxScripts = {
         [7436755782] = "https://raw.githubusercontent.com/HoangHienXScripts/Scripts/refs/heads/obfucated/Games/GrowAGarden_Obf.luau",
 
         -- 99 Day/Night with Campfire: simple items esp --
-        [] = "https://raw.githubusercontent.com/HoangHienXScripts/Scripts/refs/heads/obfucated/Games/99Days_ItemsESP.luau"
+        [7326934954] = "https://raw.githubusercontent.com/HoangHienXScripts/Scripts/refs/heads/obfucated/Games/99Days_ItemsESP.luau"
     },
     ["Its_Not_Matched"] = {
         "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",
