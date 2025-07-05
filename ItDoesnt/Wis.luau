@@ -12,6 +12,10 @@ _G.HHxScripts = {
     ["Its_Not_Matched"] = {
         "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",
         "https://raw.githubusercontent.com/HoangHienXScripts/Scripts/refs/heads/modified/InfiniteYield/MainSource.luau"
+    },
+    ["BlackList"] = {
+        -- Blue Lock Rivals --
+        [6325068386] = "game.Players.LocalPlayer:Kick('This game, i dont liked it... so leave!')"
     }
 }
 
