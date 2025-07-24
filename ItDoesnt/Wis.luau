@@ -16,7 +16,7 @@ _G.HHxScripts = {
     },
     ["BlackList"] = {
         -- Blue Lock Rivals --
-        [6325068386] = "game.Players.LocalPlayer:Kick('This game, i dont liked it... so leave!')"
+        [6325068386] = "game.Players.LocalPlayer:Kick('Scripts này hiện không hỗ trợ cho trò chơi này... tại sao?\nđơn giản là tôi méo thích trò này hẹ hẹ!')"
     }
 }
 
