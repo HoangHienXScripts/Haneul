@@ -38,8 +38,4 @@ local checkgames, dictory = {
    }
 }
 
-if table.find(checkgames, game.GameId) then
-  game:GetService("StarterGui"):SetCore("SendNotification", {Title = "😆 Thông báo 😆", Text = "📑 Trò này được đó... 📑", Duration = 2.5,})
-else
-  game:GetService("Players").LocalPlayer:Kick(dictory["b"][math.random(1, #dictory["b"])])
-end
+if table.find(checkgames, game.GameId) then game:GetService("StarterGui"):SetCore("SendNotification", {Title = "😆 Thông báo 😆", Text = "📑 Trò này được đó... 📑", Duration = 2.5,}) else game:GetService("Players").LocalPlayer:Kick(dictory["b"][math.random(1, #dictory["b"])]) end
