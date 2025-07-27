@@ -9,6 +9,7 @@ local checkgames, dictory = {
              "Có thể là do... tôi lười!"
    },
     ["b"] = {
+             -- quên ghi cmt 30 câu nói đùa của phần b này là do Artifact Generate --
              "Bạn vừa bị đá khỏi server vì... quá đẹp trai!",
              "Chúng tôi không chịu nổi tài năng của bạn!",
              "Đá chơi thôi chứ không có lý do gì đâu!",
